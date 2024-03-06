@@ -105,6 +105,11 @@
             font-size: 15px;
             transition: transform 0.3s;
         }
+        a.nav-link:hover {
+            color: wheat;
+            font-size: 15px;
+            transition: transform 0.3s;
+        }
 
         .navbar-nav {
             gap: 20px;
@@ -306,7 +311,9 @@
             background: transparent;
             border: none;
             color: white;
-            font-size: 30px;
+            font-size: 40px;
+            position: relative;
+            left: 98%;
         }
 
         .animated-bar {
@@ -372,7 +379,7 @@
         .content-wrapper {
             border-bottom: 2px solid #009e66;
             padding-bottom: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
 
         .single-info {
@@ -446,7 +453,8 @@
 
         .about-info {
             margin-top: 90px;
-            display: inline-flex;
+            display: flex;
+    flex-direction: column;
         }
 
         .top-icon {
@@ -482,11 +490,14 @@
             font-size: 14px;
             color: #9f9f9f;
         }
-
+        .service-top{
+            margin-top: 80px;
+        }
         .service-top h1 {
             font-size: 40px;
             font-weight: 700;
             letter-spacing: 2px;
+            
         }
 
         .pricing-top {
@@ -535,6 +546,34 @@
             border-radius: 50px;
             width: 80%;
         }
+@media(max-width: 991px) {
+    .image-wrapper{
+        margin-bottom: 40px;
+        text-align: center;
+        
+    }
+    .content {
+    background-image: url(assets/img/bg-img.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+.img-background{
+    display: none;
+}
+    .heading h1{
+        text-align: center;
+        font-size: 43px;
+    }
+   
+}
+        @media (min-width: 992px) {
+    .about-info {
+        flex-direction: row; /* For medium and larger screens, display horizontally */
+    }
+    
+    
+}
     </style>
 </head>
 
@@ -583,13 +622,13 @@
                     <div class="animated-bar"></div>
                 </div>
                 <div class="about-info mb-5">
-                    <div class="col-lg-5 ">
+                    <div class="col-lg-5 col-md-12 col-12">
                         <!-- Left column with image -->
                         <div class="image-wrapper">
                             <img src="assets/img/about.jpg" alt="Image" style="width: 80%; height: auto">
                         </div>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 col-md-12 col-12">
                         <!-- Right column with content -->
                         <div class="content-wrapper">
                             <!-- Content goes here -->
@@ -623,6 +662,7 @@
                                     <span>Contact: </span>
                                     <p><a class="email-click" href="tel:+966590302119">+966590302119</a></p>
                                 </div>
+                               
                             </div>
                         </div>
                         <div class="contact-cv">
@@ -630,13 +670,14 @@
                                 <button type="button" class="btn btn-outline-success" id="downloadButton">Download
                                     CV</button>
                             </div>
-                            <hr class="horizontal-line">
-                            <div class="social-linkss ">
-                                <a href="#" class="social-iconn text-white"><i class="fab fa-facebook"></i></a>
+                            <!--<hr class="horizontal-line">-->
+                            <div class="social-linkss ms-5 gap-1">
                                 <a href="mailto:iomerarshad@gmail.com" class="social-iconn"><i
-                                        class="far fa-envelope"></i></a>
-                                <a href="#" class="social-iconn"><i class="fab fa-github"></i></a>
-                                <a href="#" class="social-iconn"><i class="fab fa-linkedin"></i></a>
+                                    class="far fa-envelope"></i></a>
+                                <a href="https://www.behance.net/umararshad3" class="social-iconn text-white"><i class="fa-brands fa-square-behance"></i></a>
+                               
+                                <a href="https://github.com/iomerarshad" class="social-iconn"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-iconn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -648,7 +689,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-lg-12">
-                    <div class="service-top mb-5">
+                    <div class="service-top mb-5 text-center">
                         <p class="section-description ">Services i offer to my clients</p>
                         <h1 class="section-title my-4 mt-2 text-white">My Services</h1>
                     </div>
