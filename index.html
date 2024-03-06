@@ -105,6 +105,7 @@
             font-size: 15px;
             transition: transform 0.3s;
         }
+
         a.nav-link:hover {
             color: wheat;
             font-size: 15px;
@@ -454,7 +455,7 @@
         .about-info {
             margin-top: 90px;
             display: flex;
-    flex-direction: column;
+            flex-direction: column;
         }
 
         .top-icon {
@@ -490,14 +491,16 @@
             font-size: 14px;
             color: #9f9f9f;
         }
-        .service-top{
+
+        .service-top {
             margin-top: 80px;
         }
+
         .service-top h1 {
             font-size: 40px;
             font-weight: 700;
             letter-spacing: 2px;
-            
+
         }
 
         .pricing-top {
@@ -546,34 +549,78 @@
             border-radius: 50px;
             width: 80%;
         }
-@media(max-width: 991px) {
-    .image-wrapper{
-        margin-bottom: 40px;
-        text-align: center;
-        
+
+        @media(max-width: 991px) {
+            .image-wrapper img {
+                width: 81%;
+    height: 285px!important;
+        border-radius: 50%; /* Make the image circular only on small screens */
     }
-    .content {
-    background-image: url(assets/img/bg-img.png);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-}
-.img-background{
-    display: none;
-}
-    .heading h1{
-        text-align: center;
-        font-size: 43px;
-    }
-   
-}
+            .close-btn{
+                left: 93%;
+            }
+            .image-wrapper {
+                margin-bottom: 40px;
+                text-align: center;
+
+            }
+
+            .content {
+                background-image: url(assets/img/bg-img.png);
+                background-size: cover;
+                background-position: center;
+                opacity: 0.5;
+            }
+
+            .img-background {
+                display: none;
+            }
+
+            .heading h1 {
+                text-align: center;
+                font-size: 43px;
+                margin-top: 50px;
+            }
+
+            .navbar {
+                padding: 23px 23px !important;
+                background-color: transparent;
+            }
+
+            .navbar-collapse {
+                text-align: center;
+            }
+
+            .navbar-nav {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                background-color: #080808;
+            }
+
+           
+            .contact-cv{
+                flex-direction: column-reverse;
+                align-items: start;
+            }
+            .social-linkss{
+                margin-left: 0px!important;
+                margin-bottom: 10px;
+                gap: 0!important;
+            }
+            .card-plan2{
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
         @media (min-width: 992px) {
-    .about-info {
-        flex-direction: row; /* For medium and larger screens, display horizontally */
-    }
-    
-    
-}
+            .about-info {
+                flex-direction: row;
+                /* For medium and larger screens, display horizontally */
+            }
+
+
+        }
     </style>
 </head>
 
@@ -609,10 +656,10 @@
 
     <div id="about" class="menu-content" style="display: none; overflow-y: auto;">
         <button class="close-btn" onclick="hideMenu('about')">&times;</button>
-        
+
         <!-- Content for About -->
         <div class="container">
-           
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading-content text-center text-white">
@@ -662,7 +709,7 @@
                                     <span>Contact: </span>
                                     <p><a class="email-click" href="tel:+966590302119">+966590302119</a></p>
                                 </div>
-                               
+
                             </div>
                         </div>
                         <div class="contact-cv">
@@ -673,11 +720,14 @@
                             <!--<hr class="horizontal-line">-->
                             <div class="social-linkss ms-5 gap-1">
                                 <a href="mailto:iomerarshad@gmail.com" class="social-iconn"><i
-                                    class="far fa-envelope"></i></a>
-                                <a href="https://www.behance.net/umararshad3" class="social-iconn text-white"><i class="fa-brands fa-square-behance"></i></a>
-                               
-                                <a href="https://github.com/iomerarshad" class="social-iconn"><i class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-iconn"><i class="fab fa-linkedin"></i></a>
+                                        class="far fa-envelope"></i></a>
+                                <a href="https://www.behance.net/umararshad3" class="social-iconn text-white"><i
+                                        class="fa-brands fa-square-behance"></i></a>
+
+                                <a href="https://github.com/iomerarshad" class="social-iconn"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-iconn"><i
+                                        class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -777,7 +827,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-plan">
+                    <div class="card-plan card-plan2">
                         <div class="card-body">
                             <div class="text-center">
                                 <i class="top-icon fa-solid fa-rocket"></i>
@@ -960,11 +1010,14 @@
                     <div class="footer ">
 
                         <div class="social-links">
-                            <a href="#" class="social-icon text-white"><i class="fab fa-facebook"></i></a>
                             <a href="mailto:iomerarshad@gmail.com" class="social-icon"><i
                                     class="far fa-envelope"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.behance.net/umararshad3" class="social-icon text-white"><i
+                                    class="fa-brands fa-square-behance"></i></a>
+                            <a href="https://github.com/iomerarshad" class="social-icon"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-icon"><i
+                                    class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
