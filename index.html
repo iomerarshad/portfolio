@@ -439,12 +439,101 @@
             margin: 20px 0;
             /* Adjust the margin as needed */
         }
-        .contact-info{
+
+        .contact-info {
             margin-bottom: 40px;
         }
-        .about-info{
+
+        .about-info {
             margin-top: 90px;
             display: inline-flex;
+        }
+
+        .top-icon {
+            color: #009e66;
+            display: inline-block;
+            font-size: 58px;
+            margin-bottom: 22px;
+            transition: font-size 0.2s ease;
+        }
+
+        .top-icon:hover {
+            font-size: 62px;
+            /* Font size on hover */
+        }
+
+        h6 {
+            color: #f3f3f3;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: -.5px;
+            margin-bottom: 14px;
+        }
+
+        .card-parent {
+            background-color: #161616;
+            border-bottom: 2px solid transparent;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+            margin-bottom: 30px;
+            padding: 38px 42px;
+        }
+
+        .card-parent p {
+            font-size: 14px;
+            color: #9f9f9f;
+        }
+
+        .service-top h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .pricing-top {
+            margin-top: 100px;
+        }
+
+        .pricing-top h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 2px;
+
+        }
+
+        .card-plan {
+            background-color: #161616;
+            border-bottom: 2px solid transparent;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+            margin-bottom: 30px;
+            padding: 38px 42px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .card-body .list-group-item {
+            background: #161616;
+            text-align: center;
+            border: none;
+            color: #9f9f9f;
+
+        }
+
+        .card-subtitle {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .card-price-tag {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+
+        }
+
+        .card-footer .btn {
+            border-radius: 50px;
+            width: 80%;
         }
     </style>
 </head>
@@ -466,7 +555,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showMenu(event, 'resume')">Resume</a>
                     </li>
-                   
+
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showMenu(event, 'contact')">Contact</a>
                     </li>
@@ -481,8 +570,10 @@
 
     <div id="about" class="menu-content" style="display: none; overflow-y: auto;">
         <button class="close-btn" onclick="hideMenu('about')">&times;</button>
+        
         <!-- Content for About -->
         <div class="container">
+           
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading-content text-center text-white">
@@ -491,7 +582,7 @@
                     </div>
                     <div class="animated-bar"></div>
                 </div>
-                <div class="about-info  mb-5">
+                <div class="about-info mb-5">
                     <div class="col-lg-5 ">
                         <!-- Left column with image -->
                         <div class="image-wrapper">
@@ -503,13 +594,17 @@
                         <div class="content-wrapper">
                             <!-- Content goes here -->
                             <h2 class="text-success">Who am i?</h2>
-                            <h6 class="text-white description-self my-4">I'm Umar Arshad, a visual UX/UI Designer and
-                                Web Developer</h6>
-                            <p class="para-self">I am a freelancer based in the United Kingdom and i have been building
-                                noteworthy UX/UI
-                                designs and websites for years, which comply with the latest design trends. I help
-                                convert a vision and an idea into meaningful and useful products. Having a sharp eye for
-                                product evolution helps me prioritize tasks, iterate fast and deliver faster.</p>
+                            <h6 class="text-white description-self my-4">I'm Umar Arshad, a Front-end and
+                                Web/ Wordpress Developer.</h6>
+                            <p class="para-self">I am a freelancer based in the Kingdom of Saudi Arabia, a
+                                highly experienced front-end and back-end developer with over 6 years of hands-on
+                                expertise in the realm of web development. My passion lies in crafting dynamic and
+                                responsive web applications that not only meet but surpass client expectations. In the
+                                realm of frontend development, I possess a strong command of HTML, CSS, Bootstrap,
+                                JavaScript, and React. As a Backend Developer, I excel in the PHP and
+                                exhibit exceptional proficiency in database design and management. I am unwaveringly
+                                dedicated to delivering top-notch solutions that seamlessly align with your business
+                                objectives. Let's collaborate to create an exceptional web experience together!</p>
                         </div>
                         <div class="contact-info">
                             <div class="row">
@@ -551,10 +646,152 @@
 
 
             </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="service-top mb-5">
+                        <p class="section-description ">Services i offer to my clients</p>
+                        <h1 class="section-title my-4 mt-2 text-white">My Services</h1>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-parent text-start">
+                        <i class="top-icon fa-brands fa-html5"></i> <!-- Font Awesome icon -->
+                        <h6>Heading 1</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec turpis vitae lorem
+                            dapibus venenatis.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-parent text-start">
+                        <i class="top-icon fa-brands fa-html5"></i> <!-- Font Awesome icon -->
+                        <h6>Heading 1</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec turpis vitae lorem
+                            dapibus venenatis.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-parent text-start">
+                        <i class="top-icon fa-brands fa-wordpress-simple"></i> <!-- Font Awesome icon -->
+                        <h6>Heading 1</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec turpis vitae lorem
+                            dapibus venenatis.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-parent text-start">
+                        <i class="top-icon fa-brands fa-html5"></i> <!-- Font Awesome icon -->
+                        <h6>Heading 1</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec turpis vitae lorem
+                            dapibus venenatis.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-parent text-start">
+                        <i class="top-icon fa-brands fa-html5"></i> <!-- Font Awesome icon -->
+                        <h6>Heading 1</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec turpis vitae lorem
+                            dapibus venenatis.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-parent text-start">
+                        <i class="top-icon fa-brands fa-html5"></i> <!-- Font Awesome icon -->
+                        <h6>Heading 1</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec turpis vitae lorem
+                            dapibus venenatis.</p>
+                    </div>
+                </div>
 
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pricing-top mb-5 text-center">
+                        <p class="section-description ">Get started with my services</p>
+                        <h1 class="section-title my-4 mt-2 text-white">Choose a Plan</h1>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="top-icon fa-solid fa-tag"></i>
+                            </div>
+                            <h6 class="card-subtitle mb-2 text-center text-white">Standard</h6>
+
+                            <h4 class="card-price-tag mb-3 text-center text-white">$20/month</h4>
+                            <ul class="list-group list-group-flush mt-5">
+                                <li class="list-group-item">Benefit 1</li>
+                                <li class="list-group-item">Benefit 2</li>
+                                <li class="list-group-item">Benefit 3</li>
+                                <li class="list-group-item">Benefit 4</li>
+                                <li class="list-group-item">Benefit 5</li>
+                                <li class="list-group-item">Benefit 6</li>
+                                <!-- Add more benefits as needed -->
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center mt-5 mb-0">
+                            <a href="#" class="btn btn-success">Select Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="top-icon fa-solid fa-rocket"></i>
+                            </div>
+                            <h6 class="card-subtitle mb-2 text-center text-white">Professional</h6>
+
+                            <h4 class="card-price-tag mb-3 text-center text-white">$20/month</h4>
+                            <ul class="list-group list-group-flush mt-5">
+                                <li class="list-group-item">Benefit 1</li>
+                                <li class="list-group-item">Benefit 2</li>
+                                <li class="list-group-item">Benefit 3</li>
+                                <li class="list-group-item">Benefit 4</li>
+                                <li class="list-group-item">Benefit 5</li>
+                                <li class="list-group-item">Benefit 6</li>
+                                <!-- Add more benefits as needed -->
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center mt-5 mb-0">
+                            <a href="#" class="btn btn-success">Select Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card-plan">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="top-icon fa-solid fa-bolt-lightning"></i>
+                            </div>
+                            <h6 class="card-subtitle mb-2 text-center text-white">Business</h6>
+
+                            <h4 class="card-price-tag mb-3 text-center text-white">$20/month</h4>
+                            <ul class="list-group list-group-flush mt-5">
+                                <li class="list-group-item">Benefit 1</li>
+                                <li class="list-group-item">Benefit 2</li>
+                                <li class="list-group-item">Benefit 3</li>
+                                <li class="list-group-item">Benefit 4</li>
+                                <li class="list-group-item">Benefit 5</li>
+                                <li class="list-group-item">Benefit 6</li>
+                                <!-- Add more benefits as needed -->
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center mt-5 mb-0">
+                            <a href="#" class="btn btn-success">Select Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
 
         </div>
-        
+
     </div>
 
     <div id="resume" class="menu-content" style="display: none; overflow-y: auto;">
@@ -631,11 +868,12 @@
             </div>
 
 
+
         </div>
 
     </div>
 
-   
+
 
     <div id="contact" class="menu-content" style="display: none;">
         <!-- Content for Contact -->
