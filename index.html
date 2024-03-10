@@ -666,7 +666,21 @@
     z-index: 9999;
     transition: transform 0.15s ease;
 }
+/* Desktop and laptop screens */
+@media only screen and (min-width: 768px) {
+    /* Cursor styling for desktop and laptop screens */
+    .cursor {
+        /* Add your cursor styling properties here */
+    }
+}
 
+/* Mobile screens */
+@media only screen and (max-width: 767px) {
+    /* Hide cursor on mobile screens */
+    .cursor {
+        display: none;
+    }
+}
 /* For WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 8px; /* Width of the scroll bar */
