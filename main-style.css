@@ -1,6 +1,5 @@
-body {
-    background-color: black;
-}
+
+
 
 .img-fluid {
     max-width: 100%;
@@ -89,6 +88,12 @@ a.navbar-brand {
 
 a.nav-link {
     color: white;
+    font-size: 15px;
+    transition: transform 0.3s;
+}
+
+a.nav-link:hover {
+    color: wheat;
     font-size: 15px;
     transition: transform 0.3s;
 }
@@ -293,7 +298,9 @@ a.nav-link {
     background: transparent;
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
+    position: relative;
+    left: 98%;
 }
 
 .animated-bar {
@@ -359,7 +366,7 @@ a.nav-link {
 .content-wrapper {
     border-bottom: 2px solid #009e66;
     padding-bottom: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 .single-info {
@@ -426,6 +433,182 @@ a.nav-link {
     margin: 20px 0;
     /* Adjust the margin as needed */
 }
-.contact-info{
+
+.contact-info {
     margin-bottom: 40px;
+}
+
+.about-info {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-icon {
+    color: #009e66;
+    display: inline-block;
+    font-size: 58px;
+    margin-bottom: 22px;
+    transition: font-size 0.2s ease;
+}
+
+.top-icon:hover {
+    font-size: 62px;
+    /* Font size on hover */
+}
+
+h6 {
+    color: #f3f3f3;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+}
+
+.card-parent {
+    background-color: #161616;
+    border-bottom: 2px solid transparent;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+    margin-bottom: 30px;
+    padding: 38px 42px;
+}
+
+.card-parent p {
+    font-size: 14px;
+    color: #9f9f9f;
+}
+
+.service-top {
+    margin-top: 80px;
+}
+
+.service-top h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+
+.pricing-top {
+    margin-top: 100px;
+}
+
+.pricing-top h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+
+.card-plan {
+    background-color: #161616;
+    border-bottom: 2px solid transparent;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+    margin-bottom: 30px;
+    padding: 38px 42px;
+    width: 80%;
+    margin: auto;
+}
+
+.card-body .list-group-item {
+    background: #161616;
+    text-align: center;
+    border: none;
+    color: #9f9f9f;
+
+}
+
+.card-subtitle {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.card-price-tag {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+
+.card-footer .btn {
+    border-radius: 50px;
+    width: 80%;
+}
+
+@media(max-width: 991px) {
+    .image-wrapper img {
+        width: 81%;
+        height: 285px !important;
+        border-radius: 50%;
+        /* Make the image circular only on small screens */
+    }
+
+    .close-btn {
+        left: 93%;
+    }
+
+    .image-wrapper {
+        margin-bottom: 40px;
+        text-align: center;
+
+    }
+
+    .content {
+        background-image: url(assets/img/bg-img.png);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+    }
+
+    .img-background {
+        display: none;
+    }
+
+    .heading h1 {
+        text-align: center;
+        font-size: 43px;
+        margin-top: 50px;
+    }
+
+    .navbar {
+        padding: 23px 23px !important;
+        background-color: transparent;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #080808;
+    }
+
+
+    .contact-cv {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+
+    .social-linkss {
+        margin-left: 0px !important;
+        margin-bottom: 10px;
+        gap: 0 !important;
+    }
+
+    .card-plan2 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-info {
+        flex-direction: row;
+        /* For medium and larger screens, display horizontally */
+    }
+
+
 }

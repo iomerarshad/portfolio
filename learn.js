@@ -38,3 +38,37 @@ function updateDynamicText() {
 // Call the function to update the dynamic text
 setInterval(updateDynamicText, 100); // Change 200 to the desired typing speed in milliseconds
 
+window.addEventListener('load', function() {
+    var heading = document.getElementById('animation-text');
+    heading.classList.add('slide-in');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    const headingsAndImages = document.querySelectorAll('h1, h2, h3, h4, h5, h6, img, p, span, i, a, button, li');
+
+    headingsAndImages.forEach(element => {
+        element.addEventListener('mouseover', function() {
+            cursor.style.backgroundColor = 'transparent'; // Change cursor color to white
+            cursor.style.borderColor = 'white'; // Set cursor border color to green
+            
+        });
+        element.addEventListener('mouseout', function() {
+            cursor.style.backgroundColor = 'white'; // Change cursor color back to red when not hovering
+        });
+    });
+});
+
+
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    lerp: 0.02
+});

@@ -4,17 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Software Enginner</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    
     <style>
         body {
             background-color: black;
-          
-    overflow-x: hidden;
+
+            overflow-x: hidden;
 
         }
 
@@ -629,438 +637,492 @@
 
 
         }
+        .img-about{
+            opacity: 0.5;
+        }
+       
+        @keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+.cursor {
+    position: fixed;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white ;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease;
+}
+
+/* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scroll bar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: green; /* Color of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scroll thumb on hover */
+}
+
+
     </style>
+
 </head>
 
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Umar.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class=""><i class="fa-solid fa-bars"
-                        style="color: white; font-size: 25px; font-weight: 600;"></i></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showMenu(event, 'about')">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showMenu(event, 'resume')">Resume</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showMenu(event, 'contact')">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showMenu(event, 'portfolio')">Portfolio</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <div id="about" class="menu-content" style="display: none; overflow-y: auto;">
-        <button class="close-btn" onclick="hideMenu('about')">&times;</button>
-
-        <!-- Content for About -->
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading-content text-center text-white">
-                        <p class="section-description">Get to know me</p>
-                        <h1 class="section-title my-4 mt-2">About Me</h1>
-                    </div>
-                    <div class="animated-bar"></div>
+<body data-scroll-container>
+    <div class="cursor"></div>
+    <div  id="main">
+        
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">Umar.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""><i class="fa-solid fa-bars"
+                            style="color: white; font-size: 25px; font-weight: 600;"></i></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showMenu(event, 'about')">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showMenu(event, 'resume')">Resume</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showMenu(event, 'contact')">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showMenu(event, 'portfolio')">Portfolio</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="about-info mb-5">
-                    <div class="col-lg-5 col-md-12 col-12">
-                        <!-- Left column with image -->
-                        <div class="image-wrapper">
-                            <img src="assets/img/about.jpg" alt="Image" style="width: 80%; height: auto">
+            </div>
+        </nav>
+    
+    
+        <div id="about" class="menu-content" style="display: none; overflow-y: auto;">
+            <button class="close-btn" onclick="hideMenu('about')">&times;</button>
+    
+            <!-- Content for About -->
+            <div class="container">
+    
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading-content text-center text-white">
+                            <p class="section-description">Get to know me</p>
+                            <h1 class="section-title my-4 mt-2">About Me</h1>
+                        </div>
+                        <div class="animated-bar"></div>
+                    </div>
+                    <div class="about-info mb-5">
+                        <div class="col-lg-5 col-md-12 col-12">
+                            <!-- Left column with image -->
+                            <div class="image-wrapper">
+                                <img src="assets/img/about.jpg" class="img-about" alt="Image" style="width: 80%; height: auto">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-12 col-12">
+                            <!-- Right column with content -->
+                            <div class="content-wrapper">
+                                <!-- Content goes here -->
+                                <h2 class="text-success">Who am i?</h2>
+                                <h6 class="text-white description-self my-4">I'm Umar Arshad, a Front-end and
+                                    Web/ Wordpress Developer.</h6>
+                                <p class="para-self">I am a freelancer based in the Kingdom of Saudi Arabia, a
+                                    highly experienced front-end and back-end developer with over 6 years of hands-on
+                                    expertise in the realm of web development. My passion lies in crafting dynamic and
+                                    responsive web applications that not only meet but surpass client expectations. In the
+                                    realm of frontend development, I possess a strong command of HTML, CSS, Bootstrap,
+                                    JavaScript, and React. As a Backend Developer, I excel in the PHP and
+                                    exhibit exceptional proficiency in database design and management. I am unwaveringly
+                                    dedicated to delivering top-notch solutions that seamlessly align with your business
+                                    objectives. Let's collaborate to create an exceptional web experience together!</p>
+                            </div>
+                            <div class="contact-info">
+                                <div class="row">
+                                    <div class="col-lg-6 single-info">
+                                        <span>Name: </span>
+                                        <p>Umar Arshad</p>
+                                    </div>
+                                    <div class="col-lg-6 single-info ">
+                                        <span>Email: </span>
+                                        <p><a class="email-click"
+                                                href="mailto:iomerarshad@gmail.com">iomerarshad@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 single-info">
+                                        <span>Contact: </span>
+                                        <p><a class="email-click" href="tel:+966590302119">+966590302119</a></p>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="contact-cv">
+                                <div class="btn-cv">
+                                    <button type="button" class="btn btn-outline-success" id="downloadButton">Download
+                                        CV</button>
+                                </div>
+                                <!--<hr class="horizontal-line">-->
+                                <div class="social-linkss ms-5 gap-1">
+                                    <a href="mailto:iomerarshad@gmail.com" class="social-iconn"><i
+                                            class="far fa-envelope"></i></a>
+                                    <a href="https://www.behance.net/umararshad3" class="social-iconn text-white"><i
+                                            class="fa-brands fa-square-behance"></i></a>
+    
+                                    <a href="https://github.com/iomerarshad" class="social-iconn"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-iconn"><i
+                                            class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+    
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-12 col-12">
-                        <!-- Right column with content -->
-                        <div class="content-wrapper">
-                            <!-- Content goes here -->
-                            <h2 class="text-success">Who am i?</h2>
-                            <h6 class="text-white description-self my-4">I'm Umar Arshad, a Front-end and
-                                Web/ Wordpress Developer.</h6>
-                            <p class="para-self">I am a freelancer based in the Kingdom of Saudi Arabia, a
-                                highly experienced front-end and back-end developer with over 6 years of hands-on
-                                expertise in the realm of web development. My passion lies in crafting dynamic and
-                                responsive web applications that not only meet but surpass client expectations. In the
-                                realm of frontend development, I possess a strong command of HTML, CSS, Bootstrap,
-                                JavaScript, and React. As a Backend Developer, I excel in the PHP and
-                                exhibit exceptional proficiency in database design and management. I am unwaveringly
-                                dedicated to delivering top-notch solutions that seamlessly align with your business
-                                objectives. Let's collaborate to create an exceptional web experience together!</p>
+    
+    
+    
+                </div>
+                <div data-scroll="0" data-scroll-delay="0.1" data-scroll-speed="1.8" class="row mt-5">
+                    <div class="col-lg-12">
+                        <div  class="service-top mb-5 text-center">
+                            <p class="section-description ">Services i offer to my clients</p>
+                            <h1 class="section-title my-4 mt-2 text-white">My Services</h1>
                         </div>
-                        <div class="contact-info">
-                            <div class="row">
-                                <div class="col-lg-6 single-info">
-                                    <span>Name: </span>
-                                    <p>Umar Arshad</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-parent text-start">
+                            <i class="top-icon fa-brands fa-html5"></i> <!-- Font Awesome icon -->
+                            <h6>Front-end Developer</h6>
+                            <p>I'm a passionate front-end developer skilled in HTML, CSS, and Bootstrap. With my HTML
+                                expertise, I craft web pages with clean and semantic structures, optimizing for performance
+                                and accessibility. Leveraging CSS, I create visually appealing web designs, and with
+                                Bootstrap, I develop responsive layouts that look great on all devices. With my expertise, I
+                                ensure each project delivers user-friendly and aesthetically pleasing websites.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-parent text-start">
+                            <i class="top-icon fa-solid fa-file-code"></i> <!-- Font Awesome icon -->
+                            <h6>PSD Design</h6>
+                            <p>I excel in PSD design, utilizing creativity and attention to detail to craft visually
+                                stunning interfaces. With a keen eye for aesthetics, I transform ideas into pixel-perfect
+                                designs that resonate with clients. From layout designs to custom graphics, I leverage
+                                industry-standard tools to ensure high-quality PSD designs. Whether for websites, mobile
+                                apps, or digital platforms, I deliver captivating designs that elevate brands.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-parent text-start">
+                            <i class="top-icon fa-brands fa-js"></i> <!-- Font Awesome icon -->
+                            <h6>Javascript</h6>
+                            <p>I'm proficient in JavaScript, a versatile language adept at adding interactivity to web apps.
+                                With expertise, I implement dynamic features like form validation, DOM manipulation, and
+                                AJAX requests, enhancing user experiences. Whether creating interactive elements or
+                                optimizing performance, I leverage JavaScript for immersive web experiences that meet
+                                project requirements effectively, efficiently, and seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-parent text-start">
+                            <i class="top-icon fa-brands fa-wordpress-simple"></i> <!-- Font Awesome icon -->
+                            <h6>WordPress Development</h6>
+                            <p>WordPress is my platform of choice for building robust and scalable websites with ease. From
+                                theme customization to plugin development, I harness the power of WordPress to tailor
+                                solutions that align with the unique requirements of clients. Whether it's creating custom
+                                themes from scratch or extending the functionality of existing sites, I leverage my
+                                WordPress expertise to deliver tailored solutions that exceed expectations.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-parent text-start">
+                            <i class="top-icon fa-sharp fa-regular fa-object-group"></i> <!-- Font Awesome icon -->
+                            <h6>Responsive Design</h6>
+                            <p>With the proliferation of mobile devices, responsive design is paramount in ensuring optimal
+                                user experiences across all screen sizes. I specialize in creating responsive layouts that
+                                adapt seamlessly to various devices, be it desktops, tablets, or smartphones. Using media
+                                queries and fluid grids, I prioritize responsiveness to deliver websites that not only look
+                                great but also perform exceptionally well across all platforms.</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-parent text-start">
+                            <i class="top-icon fa-solid fa-gears"></i> <!-- Font Awesome icon -->
+                            <h6>Support</h6>
+                            <p>I offer exceptional customer support alongside my technical expertise, ensuring a seamless
+                                experience for clients. With responsive communication and proactive problem-solving, I
+                                address queries and concerns promptly. Whether troubleshooting technical issues, guiding
+                                project implementation, or providing post-project support, client satisfaction is my utmost
+                                priority, diligently fostering trust and reliability.</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="pricing-top mb-5 text-center">
+                            <p class="section-description ">Get started with my services</p>
+                            <h1 class="section-title my-4 mt-2 text-white">Choose a Plan</h1>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-plan">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="top-icon fa-solid fa-tag"></i>
                                 </div>
-                                <div class="col-lg-6 single-info ">
-                                    <span>Email: </span>
-                                    <p><a class="email-click"
-                                            href="mailto:iomerarshad@gmail.com">iomerarshad@gmail.com</a></p>
-                                </div>
+                                <h6 class="card-subtitle mb-2 text-center text-white">Standard</h6>
+    
+                                <h4 class="card-price-tag mb-3 text-center text-white">$80/month</h4>
+                                <ul class="list-group list-group-flush mt-5">
+    
+                                    <li class="list-group-item">Functional website</li>
+                                    <li class="list-group-item">5 Revisions</li>
+                                    <li class="list-group-item">Content upload</li>
+                                    <li class="list-group-item">Responsive design</li>
+                                    <li class="list-group-item">24/7 Support</li>
+                                    <!-- Add more benefits as needed -->
+                                </ul>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-6 single-info">
-                                    <span>Contact: </span>
-                                    <p><a class="email-click" href="tel:+966590302119">+966590302119</a></p>
-                                </div>
-
+                            <div class="card-footer text-center mt-5 mb-0">
+                                <a href="#" class="btn btn-success">Select Plan</a>
                             </div>
                         </div>
-                        <div class="contact-cv">
-                            <div class="btn-cv">
-                                <button type="button" class="btn btn-outline-success" id="downloadButton">Download
-                                    CV</button>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-plan card-plan2">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="top-icon fa-solid fa-rocket"></i>
+                                </div>
+                                <h6 class="card-subtitle mb-2 text-center text-white">Professional</h6>
+    
+                                <h4 class="card-price-tag mb-3 text-center text-white">$200/month</h4>
+                                <ul class="list-group list-group-flush mt-5">
+    
+                                    <li class="list-group-item">Functional website</li>
+                                    <li class="list-group-item">Unlimited Revisions</li>
+                                    <li class="list-group-item">Content upload</li>
+                                    <li class="list-group-item">Responsive design</li>
+                                    <li class="list-group-item">24/7 Support</li>
+                                    <!-- Add more benefits as needed -->
+                                </ul>
                             </div>
-                            <!--<hr class="horizontal-line">-->
-                            <div class="social-linkss ms-5 gap-1">
-                                <a href="mailto:iomerarshad@gmail.com" class="social-iconn"><i
+                            <div class="card-footer text-center mt-5 mb-0">
+                                <a href="#" class="btn btn-success">Select Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-plan">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <i class="top-icon fa-solid fa-bolt-lightning"></i>
+                                </div>
+                                <h6 class="card-subtitle mb-2 text-center text-white">Business</h6>
+    
+                                <h4 class="card-price-tag mb-3 text-center text-white">$350/month</h4>
+                                <ul class="list-group list-group-flush mt-5">
+    
+                                    <li class="list-group-item">E-commerce functionality</li>
+                                    <li class="list-group-item">Unlimited Revisions</li>
+                                    <li class="list-group-item">Content upload</li>
+                                    <li class="list-group-item">Responsive design</li>
+                                    <li class="list-group-item">24/7 Support</li>
+                                    <!-- Add more benefits as needed -->
+                                </ul>
+                            </div>
+                            <div class="card-footer text-center mt-5 mb-0">
+                                <a href="#" class="btn btn-success">Select Plan</a>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+    
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div id="resume" class="menu-content" style="display: none; overflow-y: auto;">
+            <button class="close-btn" onclick="hideMenu('resume')">&times;</button>
+            <!-- Content for Resume -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading-content text-center text-white">
+                            <p class="section-description">Get to know me</p>
+                            <h1 class="section-title my-4 mt-2">Resume</h1>
+                        </div>
+                        <div class="animated-bar"></div>
+                    </div>
+                    <div class="about-info d-flex mt-5 mb-5">
+                        <div class="col-lg-5 ">
+                            <!-- Left column with image -->
+                            <div class="image-wrapper">
+                                <img src="assets/img/about.jpg" alt="Image" style="width: 80%; height: auto">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <!-- Right column with content -->
+                            <div class="content-wrapper">
+                                <!-- Content goes here -->
+                                <h2 class="text-success">Who am i?</h2>
+                                <h6 class="text-white description-self my-4">I'm Umar Arshad, a visual UX/UI Designer and
+                                    Web Developer</h6>
+                                <p class="para-self">I am a freelancer based in the United Kingdom and i have been building
+                                    noteworthy UX/UI
+                                    designs and websites for years, which comply with the latest design trends. I help
+                                    convert a vision and an idea into meaningful and useful products. Having a sharp eye for
+                                    product evolution helps me prioritize tasks, iterate fast and deliver faster.</p>
+                            </div>
+                            <div class="contact-info">
+                                <div class="row">
+                                    <div class="col-lg-6 single-info">
+                                        <span>Name: </span>
+                                        <p>Umar Arshad</p>
+                                    </div>
+                                    <div class="col-lg-6 single-info ">
+                                        <span>Email: </span>
+                                        <p><a class="email-click"
+                                                href="mailto:iomerarshad@gmail.com">iomerarshad@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 single-info">
+                                        <span>Contact: </span>
+                                        <p><a class="email-click" href="tel:+966590302119">+966590302119</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-cv">
+                                <div class="btn-cv">
+                                    <button type="button" class="btn btn-outline-success" id="downloadButton">Download
+                                        CV</button>
+                                </div>
+                                <hr class="horizontal-line">
+                                <div class="social-linkss ">
+                                    <a href="#" class="social-iconn text-white"><i class="fab fa-facebook"></i></a>
+                                    <a href="mailto:iomerarshad@gmail.com" class="social-iconn"><i
+                                            class="far fa-envelope"></i></a>
+                                    <a href="#" class="social-iconn"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="social-iconn"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+    
+    
+                </div>
+    
+    
+    
+            </div>
+    
+        </div>
+    
+    
+    
+        <div id="contact" class="menu-content" style="display: none;">
+            <!-- Content for Contact -->
+            Contact
+            <button class="close-btn" onclick="hideMenu('contact')">&times;</button>
+        </div>
+    
+        <div id="portfolio" class="menu-content" style="display: none;">
+            <!-- Content for Portfolio -->
+            Portfolio
+            <button class="close-btn" onclick="hideMenu('portfolio')">&times;</button>
+        </div>
+    
+    
+    
+        <div data-scroll-container class="container-fluid">
+            <div class="row">
+                <div class="area">
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-6">
+                    <div class="content">
+                        <div class="heading">
+                            <h1  id="animation-text" class="text-white">Umar Arshad</h1>
+                        </div>
+                        <div class="dynamic-text">
+                            <span id="static-text" class="text-white">I'm</span>
+                            <span id="dynamic-part" class="text-white"></span>
+                        </div>
+    
+                        <div class="footer ">
+    
+                            <div class="social-links">
+                                <a href="mailto:iomerarshad@gmail.com" class="social-icon"><i
                                         class="far fa-envelope"></i></a>
-                                <a href="https://www.behance.net/umararshad3" class="social-iconn text-white"><i
+                                <a href="https://www.behance.net/umararshad3" class="social-icon text-white"><i
                                         class="fa-brands fa-square-behance"></i></a>
-
-                                <a href="https://github.com/iomerarshad" class="social-iconn"><i
+                                <a href="https://github.com/iomerarshad" class="social-icon"><i
                                         class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-iconn"><i
+                                <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-icon"><i
                                         class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
-
                     </div>
+                </div> <!-- Empty column to push the image to the right -->
+                <div class="col-lg-5 img-background">
+                    <img src="assets/img/bg-img.png" class="img-fluid" alt="Background Image">
                 </div>
-
-
-
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <div class="service-top mb-5 text-center">
-                        <p class="section-description ">Services i offer to my clients</p>
-                        <h1 class="section-title my-4 mt-2 text-white">My Services</h1>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-parent text-start">
-                        <i class="top-icon fa-brands fa-html5"></i> <!-- Font Awesome icon -->
-                        <h6>Front-end Developer</h6>
-                        <p>I'm a passionate front-end developer skilled in HTML, CSS, and Bootstrap. With my HTML
-                            expertise, I craft web pages with clean and semantic structures, optimizing for performance
-                            and accessibility. Leveraging CSS, I create visually appealing web designs, and with
-                            Bootstrap, I develop responsive layouts that look great on all devices. With my expertise, I
-                            ensure each project delivers user-friendly and aesthetically pleasing websites.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-parent text-start">
-                        <i class="top-icon fa-solid fa-file-code"></i> <!-- Font Awesome icon -->
-                        <h6>PSD Design</h6>
-                        <p>I excel in PSD design, utilizing creativity and attention to detail to craft visually
-                            stunning interfaces. With a keen eye for aesthetics, I transform ideas into pixel-perfect
-                            designs that resonate with clients. From layout designs to custom graphics, I leverage
-                            industry-standard tools to ensure high-quality PSD designs. Whether for websites, mobile
-                            apps, or digital platforms, I deliver captivating designs that elevate brands.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-parent text-start">
-                        <i class="top-icon fa-brands fa-js"></i> <!-- Font Awesome icon -->
-                        <h6>Javascript</h6>
-                        <p>I'm proficient in JavaScript, a versatile language adept at adding interactivity to web apps.
-                            With expertise, I implement dynamic features like form validation, DOM manipulation, and
-                            AJAX requests, enhancing user experiences. Whether creating interactive elements or
-                            optimizing performance, I leverage JavaScript for immersive web experiences that meet
-                            project requirements effectively, efficiently, and seamlessly.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-parent text-start">
-                        <i class="top-icon fa-brands fa-wordpress-simple"></i> <!-- Font Awesome icon -->
-                        <h6>WordPress Development</h6>
-                        <p>WordPress is my platform of choice for building robust and scalable websites with ease. From
-                            theme customization to plugin development, I harness the power of WordPress to tailor
-                            solutions that align with the unique requirements of clients. Whether it's creating custom
-                            themes from scratch or extending the functionality of existing sites, I leverage my
-                            WordPress expertise to deliver tailored solutions that exceed expectations.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-parent text-start">
-                        <i class="top-icon fa-sharp fa-regular fa-object-group"></i> <!-- Font Awesome icon -->
-                        <h6>Responsive Design</h6>
-                        <p>With the proliferation of mobile devices, responsive design is paramount in ensuring optimal
-                            user experiences across all screen sizes. I specialize in creating responsive layouts that
-                            adapt seamlessly to various devices, be it desktops, tablets, or smartphones. Using media
-                            queries and fluid grids, I prioritize responsiveness to deliver websites that not only look
-                            great but also perform exceptionally well across all platforms.</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-parent text-start">
-                        <i class="top-icon fa-solid fa-gears"></i> <!-- Font Awesome icon -->
-                        <h6>Support</h6>
-                        <p>I offer exceptional customer support alongside my technical expertise, ensuring a seamless
-                            experience for clients. With responsive communication and proactive problem-solving, I
-                            address queries and concerns promptly. Whether troubleshooting technical issues, guiding
-                            project implementation, or providing post-project support, client satisfaction is my utmost
-                            priority, diligently fostering trust and reliability.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="pricing-top mb-5 text-center">
-                        <p class="section-description ">Get started with my services</p>
-                        <h1 class="section-title my-4 mt-2 text-white">Choose a Plan</h1>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-plan">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <i class="top-icon fa-solid fa-tag"></i>
-                            </div>
-                            <h6 class="card-subtitle mb-2 text-center text-white">Standard</h6>
-
-                            <h4 class="card-price-tag mb-3 text-center text-white">$80/month</h4>
-                            <ul class="list-group list-group-flush mt-5">
-                                
-                                <li class="list-group-item">Functional website</li>
-                                <li class="list-group-item">5 Revisions</li>
-                                <li class="list-group-item">Content upload</li>
-                                <li class="list-group-item">Responsive design</li>
-                                <li class="list-group-item">24/7 Support</li>
-                                <!-- Add more benefits as needed -->
-                            </ul>
-                        </div>
-                        <div class="card-footer text-center mt-5 mb-0">
-                            <a href="#" class="btn btn-success">Select Plan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-plan card-plan2">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <i class="top-icon fa-solid fa-rocket"></i>
-                            </div>
-                            <h6 class="card-subtitle mb-2 text-center text-white">Professional</h6>
-
-                            <h4 class="card-price-tag mb-3 text-center text-white">$200/month</h4>
-                            <ul class="list-group list-group-flush mt-5">
-                                
-                                <li class="list-group-item">Functional website</li>
-                                <li class="list-group-item">Unlimited Revisions</li>
-                                <li class="list-group-item">Content upload</li>
-                                <li class="list-group-item">Responsive design</li>
-                                <li class="list-group-item">24/7 Support</li>
-                                <!-- Add more benefits as needed -->
-                            </ul>
-                        </div>
-                        <div class="card-footer text-center mt-5 mb-0">
-                            <a href="#" class="btn btn-success">Select Plan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-plan">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <i class="top-icon fa-solid fa-bolt-lightning"></i>
-                            </div>
-                            <h6 class="card-subtitle mb-2 text-center text-white">Business</h6>
-
-                            <h4 class="card-price-tag mb-3 text-center text-white">$350/month</h4>
-                            <ul class="list-group list-group-flush mt-5">
-                                
-                                <li class="list-group-item">E-commerce functionality</li>
-                                <li class="list-group-item">Unlimited Revisions</li>
-                                <li class="list-group-item">Content upload</li>
-                                <li class="list-group-item">Responsive design</li>
-                                <li class="list-group-item">24/7 Support</li>
-                                <!-- Add more benefits as needed -->
-                            </ul>
-                        </div>
-                        <div class="card-footer text-center mt-5 mb-0">
-                            <a href="#" class="btn btn-success">Select Plan</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div id="resume" class="menu-content" style="display: none; overflow-y: auto;">
-        <button class="close-btn" onclick="hideMenu('resume')">&times;</button>
-        <!-- Content for Resume -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading-content text-center text-white">
-                        <p class="section-description">Get to know me</p>
-                        <h1 class="section-title my-4 mt-2">Resume</h1>
-                    </div>
-                    <div class="animated-bar"></div>
-                </div>
-                <div class="about-info d-flex mt-5 mb-5">
-                    <div class="col-lg-5 ">
-                        <!-- Left column with image -->
-                        <div class="image-wrapper">
-                            <img src="assets/img/about.jpg" alt="Image" style="width: 80%; height: auto">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <!-- Right column with content -->
-                        <div class="content-wrapper">
-                            <!-- Content goes here -->
-                            <h2 class="text-success">Who am i?</h2>
-                            <h6 class="text-white description-self my-4">I'm Umar Arshad, a visual UX/UI Designer and
-                                Web Developer</h6>
-                            <p class="para-self">I am a freelancer based in the United Kingdom and i have been building
-                                noteworthy UX/UI
-                                designs and websites for years, which comply with the latest design trends. I help
-                                convert a vision and an idea into meaningful and useful products. Having a sharp eye for
-                                product evolution helps me prioritize tasks, iterate fast and deliver faster.</p>
-                        </div>
-                        <div class="contact-info">
-                            <div class="row">
-                                <div class="col-lg-6 single-info">
-                                    <span>Name: </span>
-                                    <p>Umar Arshad</p>
-                                </div>
-                                <div class="col-lg-6 single-info ">
-                                    <span>Email: </span>
-                                    <p><a class="email-click"
-                                            href="mailto:iomerarshad@gmail.com">iomerarshad@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 single-info">
-                                    <span>Contact: </span>
-                                    <p><a class="email-click" href="tel:+966590302119">+966590302119</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-cv">
-                            <div class="btn-cv">
-                                <button type="button" class="btn btn-outline-success" id="downloadButton">Download
-                                    CV</button>
-                            </div>
-                            <hr class="horizontal-line">
-                            <div class="social-linkss ">
-                                <a href="#" class="social-iconn text-white"><i class="fab fa-facebook"></i></a>
-                                <a href="mailto:iomerarshad@gmail.com" class="social-iconn"><i
-                                        class="far fa-envelope"></i></a>
-                                <a href="#" class="social-iconn"><i class="fab fa-github"></i></a>
-                                <a href="#" class="social-iconn"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-            </div>
-
-
-
-        </div>
-
-    </div>
-
-
-
-    <div id="contact" class="menu-content" style="display: none;">
-        <!-- Content for Contact -->
-        Contact
-        <button class="close-btn" onclick="hideMenu('contact')">&times;</button>
-    </div>
-
-    <div id="portfolio" class="menu-content" style="display: none;">
-        <!-- Content for Portfolio -->
-        Portfolio
-        <button class="close-btn" onclick="hideMenu('portfolio')">&times;</button>
-    </div>
-
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="area">
-                <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="content">
-                    <div class="heading">
-                        <h1 class="text-white">Umar Arshad</h1>
-                    </div>
-                    <div class="dynamic-text">
-                        <span id="static-text" class="text-white">I'm</span>
-                        <span id="dynamic-part" class="text-white"></span>
-                    </div>
-
-                    <div class="footer ">
-
-                        <div class="social-links">
-                            <a href="mailto:iomerarshad@gmail.com" class="social-icon"><i
-                                    class="far fa-envelope"></i></a>
-                            <a href="https://www.behance.net/umararshad3" class="social-icon text-white"><i
-                                    class="fa-brands fa-square-behance"></i></a>
-                            <a href="https://github.com/iomerarshad" class="social-icon"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/umar-arshad-1a9555147/" class="social-icon"><i
-                                    class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- Empty column to push the image to the right -->
-            <div class="col-lg-5 img-background">
-                <img src="assets/img/bg-img.png" class="img-fluid" alt="Background Image">
             </div>
         </div>
     </div>
+   
 
 
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
@@ -1069,6 +1131,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+       
     <script src="learn.js"></script>
 
     <script>
