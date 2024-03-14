@@ -94,7 +94,8 @@
         }
 
         .social-icon:hover {
-            transform: scale(1.5);
+            transform: scale(1.5) rotate(45deg);
+            
         }
 
         .navbar {
@@ -443,7 +444,7 @@
         }
 
         .social-iconn:hover {
-            transform: scale(1.5);
+            transform: scale(1.5) rotate(-25deg);
         }
 
         .horizontal-line {
@@ -705,9 +706,9 @@
 
 
 <body data-scroll-container>
-    <div class="cursor"></div>
-    <div  id="main">
-        
+    
+   
+        <div class="cursor"></div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="#">Umar.</a>
@@ -721,7 +722,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="showMenu(event, 'about')">About</a>
                         </li>
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a class="nav-link" href="#" onclick="showMenu(event, 'resume')">Resume</a>
                         </li>
     
@@ -730,14 +731,14 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="showMenu(event, 'portfolio')">Portfolio</a>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
             </div>
         </nav>
     
     
-        <div id="about" class="menu-content" style="display: none; overflow-y: auto;">
+        <div  id="about" class="menu-content" style="display: none; overflow-y: auto;">
             <button class="close-btn" onclick="hideMenu('about')">&times;</button>
     
             <!-- Content for About -->
@@ -745,7 +746,7 @@
     
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-heading-content text-center text-white">
+                        <div  class="section-heading-content text-center text-white">
                             <p class="section-description">Get to know me</p>
                             <h1 class="section-title my-4 mt-2">About Me</h1>
                         </div>
@@ -820,7 +821,7 @@
     
     
                 </div>
-                <div data-scroll="0" data-scroll-delay="0.1" data-scroll-speed="1.8" class="row mt-5">
+                <div  class="row mt-5">
                     <div class="col-lg-12">
                         <div  class="service-top mb-5 text-center">
                             <p class="section-description ">Services i offer to my clients</p>
@@ -908,7 +909,7 @@
                         <div class="card-plan">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <i class="top-icon fa-solid fa-tag"></i>
+                                    <i class="top-icon fa-solid fa-tag" style=" transform: rotate(45deg);"></i>
                                 </div>
                                 <h6 class="card-subtitle mb-2 text-center text-white">Standard</h6>
     
@@ -932,7 +933,7 @@
                         <div class="card-plan card-plan2">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <i class="top-icon fa-solid fa-rocket"></i>
+                                    <i class="top-icon fa-solid fa-rocket" style="transform: rotate(-45deg);"></i>
                                 </div>
                                 <h6 class="card-subtitle mb-2 text-center text-white">Professional</h6>
     
@@ -1082,7 +1083,7 @@
     
     
     
-        <div data-scroll-container class="container-fluid">
+        <div  class="container-fluid">
             <div class="row">
                 <div class="area">
                     <ul class="circles">
@@ -1129,7 +1130,10 @@
                 </div>
             </div>
         </div>
-    </div>
+
+    
+       
+    
    
 
 
@@ -1174,7 +1178,7 @@
         // Function to trigger the download of the PDF file
         function downloadPDF() {
             // Assuming your PDF file is named "resume.pdf" in the same directory
-            var pdfFilePath = 'assets/umar-arshad.pdf';
+            var pdfFilePath = 'assets/Umar-Arshad.pdf';
 
             // Create a link element
             var link = document.createElement('a');

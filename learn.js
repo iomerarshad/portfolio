@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cursor.style.backgroundColor = 'white'; // Change cursor color back to red when not hovering
         });
     });
+    
 });
 
 
@@ -70,5 +71,5 @@ document.addEventListener('DOMContentLoaded', function() {
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    lerp: 0.02
+    lerp: 0.06
 });
